@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    width: 100%;
+}
+header{
+    /* height: 80px; */
+    /* background-color: blue; */
+}
+aside{
+    padding: 20px;
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(0, 0, 128);
+    color: white;
+    z-index: 1;
+}
+
+li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+li a:hover{ 
+    background-color: rgb(20, 66, 151);
+    border-radius: 10px;
+}
+
+li a:active{
+    background-color: rgb(20, 66, 151);
+    border-radius: 10px;
+}
+
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.buttom-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.buttom-profile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: static;
+}
+
+.buttom-profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 560px;
+}
+
+
+main{
+    background-color: rgb(242, 242, 253);
+    height: 620px;
+}
+
+.name a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input{
+    height: 20px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* GLOBAL CSS */
+
+.global-css{
+    margin-left: 260px;
+    margin-right: 20px;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-p p{
+    font-size: 24px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bus-availability{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row-card-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.row-card{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
