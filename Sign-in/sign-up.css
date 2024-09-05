@@ -1,0 +1,52 @@
+body{
+    background-image: url(bus.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* .overlay{
+    background-color: black;
+    position: absolute;
+    z-index: 2;
+    height: 100px;
+    width: 1000px;
+} */
+.form{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+input::placeholder{
+    font-size: 20px;
+}
+
+button{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 127);
+    color: white;
+    border: none;
+}
