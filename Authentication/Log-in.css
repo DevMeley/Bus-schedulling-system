@@ -1,4 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
+    font-family: sans-serif;
     background-image: url(bus.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,21 +15,16 @@ body{
     align-items: center;
     min-height: 100vh;
 }
-/* .overlay{
-    background-color: black;
-    position: absolute;
-    z-index: 2;
-    height: 100px;
-    width: 1000px;
-} */
-.form{
+
+.wrapper{
     background-color: white;
     width: 400px;
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 25px;
     border-radius: 20px;
     z-index: 1;
 }
@@ -32,21 +33,31 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 15px;
 }
 input{
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     border: 1px solid gray;
 }
 input::placeholder{
-    font-size: 20px;
+    font-size: 18px;
+}
+
+input:focus{
+    outline: none;
 }
 
 button{
     padding: 15px;
+    width: 200px;
     border-radius: 10px;
     background-color: rgb(0, 0, 127);
     color: white;
     border: none;
+}
+
+h3{
+    font-size: 1.5rem;
 }
