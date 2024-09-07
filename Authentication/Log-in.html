@@ -10,11 +10,18 @@
     <div class="overlay"></div>
     <div class="wrapper">
         <h3>Log in</h3>
-        <form action="" id="MyForm">
-            <input type="email" placeholder="Email" id="MyEmail">
-            <input type="password" placeholder="Password" id="MyPassword">
+        <form action="" id="myForm">
+            <div class="input-control">
+                <input type="email" placeholder="Email" id="myEmail">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input type="password" placeholder="Password" id="myPassword">
+                <div class="error"></div>
+            </div>
+            <button id="logIn">Log in</button>
         </form>
-        <button id="logIn">Log in</button>
     </div>
+<script src="Log-in.js"></script>
 </body>
 </html>

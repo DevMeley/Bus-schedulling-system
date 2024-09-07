@@ -1,17 +1,18 @@
 const myForm = document.getElementById("myForm")
-const myEmail = document.getElementById("myEmail").value.trim()
-const myPassword = document.getElementById("myPassword").value.trim()
-const confirmMyPassword = document.getElementById("confirmMyPassword").value.trim()
 const signUp = document.getElementById("signUp")
 
 
 myForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
-    if (myEmail === "") {
+    const myEmail = document.getElementById("myEmail")
+    const myPassword = document.getElementById("myPassword")
+    const confirmMyPassword = document.getElementById("confirmMyPassword")
+
+    if (myEmail.value === "") {
         showError(myEmail, 'Email is required')
     }
-    else if (!validateEmail(myEmail)) {
+    else if (!validateEmail(myEmail.value)) {
         showError(myEmail, "Invalid Email")
     }
     else{
@@ -19,20 +20,20 @@ myForm.addEventListener('submit', (event) => {
     }
 
     
-    if (myPassword === "") {
+    if (myPassword.value === "") {
         showError(myPassword, "Password is required")
     }
-    else if (myPassword.length > 6) {
+    else if (myPassword.value.length < 6) {
         showError(myPassword, "Password is too short")
     }
     else{
         removeError(myPassword)
     }
 
-    if (confirmMyPassword === "") {
+    if (confirmMyPassword.value === "") {
         showError(confirmMyPassword, "Confirm password")
     }
-    else if (confirmMyPassword !== myForm) {
+    else if (confirmMyPassword.value !== myPassword.value) {
         showError(confirmMyPassword, "Password doesn't match")
     }
     else{
@@ -59,9 +60,9 @@ const removeError = (element) => {
     inputControl.classList.remove('error')
 }
 
-const validateEmail = (myEmail) =>{
+const validateEmail = (myEmailElement) =>{
     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    return re.test(String(myEmail).toLocaleLowerCase())
+    return re.test(String(myEmailElement).toLocaleLowerCase())
 }
 
 
