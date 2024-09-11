@@ -11,7 +11,7 @@
     <aside>
         <div class="side-nav">
             <div class="logo">
-                <img src="LOgo.png" alt="" width="80px">
+                <img src="LOgo.png" alt="">
                 <h3>Bus schedulling</h3>
             </div>
             <div class="buttom-nav">
@@ -23,20 +23,16 @@
                     <li><a href=""><i class="fas fa-bell"></i> Notification</a></li>
                     <li><a href=""><i class="fas fa-chart-simple"></i> Report</a></li>
                 </ul>
-                <div class="buttom-profile">
-                    <img src="LOgo.png" alt="">
-                    <div class="name"><a href="">
-                        <h4>Mr. Yussuf</h4>
-                        <p style="padding-top: 10px">IT support</p>
-                    </a></div>
+                <div class="logout">
+                   <a href="">Log out <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                 </div>
             </div>
         </div>
     </aside>
     <main>
-        <header class="global-css">
+        <div class="top-bar">
             <div class="left-header">
-                <h3>Welcome Mr. Yusuf</h3>
+                <h3>Dashboard</h3>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Search for anything">
@@ -48,57 +44,69 @@
                     <p style="padding-top: 10px">IT support</p>
                 </a></div>
             </div>
-        </header>
-        <section class="global-css">
-            <div class="main-p">
-                <p>Dashboard</p>
+        </div>
+        <section>
+            <div class="right-section global-css">
+                <div class="quick-action">
+                    <h4>Quick Action</h4>
+                    <div class="quick-action-card">
+                        <button id="busAvailability">Bus Availability</button>
+                        <button id="BookingSummary">Booking Summary</button>
+                    </div>
+                </div>
+                <div class="upcoming-schedule">
+                    <div class="top">
+                        <h4>upcoming Schedule</h4>
+                        <a href="">View all</a>
+                    </div>
+                    <div class="table">
+                        <div class="heading-row">
+                            <p>Bus_No</p>
+                            <p>Driver</p>
+                            <p>Route</p>
+                            <p>Departure</p>
+                        </div>
+                        <hr>
+                        <div class="body-row">
+                            <p>102</p>
+                            <p>Mr. Yinka</p>
+                            <p>Ikotun</p>
+                            <p>5:00</p>
+                        </div>
+                        <div class="body-row">
+                            <p>102</p>
+                            <p>Mr. Yinka</p>
+                            <p>Ikotun</p>
+                            <p>5:00</p>
+                        </div>
+                        <div class="body-row">
+                            <p>102</p>
+                            <p>Mr. Yinka</p>
+                            <p>Ikotun</p>
+                            <p>5:00</p>
+                        </div>
+                        <div class="body-row">
+                            <p>102</p>
+                            <p>Mr. Yinka</p>
+                            <p>Ikotun</p>
+                            <p>5:00</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
-            <div class="bus-availability">
-                <div class="top">
-                    <h4>Available Bus</h4>
-                    <p><a href="">View all</a></p>
+            <div class="left-section">
+                <div class="bus-usage">
+                    
                 </div>
-                <div class="row-card-flex">
-                    <div class="row-card">
-                        <p>Ikotun bus</p>
-                        <p>Mr.Yinka</p>
-                        <p>Depart in 2hrs</p>
-                    </div>
-                    <div class="row-card">
-                        <p>Ikotun bus</p>
-                        <p>Mr.Yinka</p>
-                        <p>Depart in 2hrs</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bookin-summary">
-                <div class="top">
-                    <h4>Booking summary</h4>
-                    <p><a href="">View all</a></p>
-                </div>
-                <div class="booking-card">
-                    <div class="row-card">
-                        <p>Ikotun bus</p>
-                        <p>Mr.Yinka</p>
-                        <p>Seat no 2</p>
-                        <p>Depart in 2hrs</p>
-                    </div>
+                <div class="punctuality">
+
                 </div>
             </div>
         </section>
-        <!-- <div class="widgets">
-            <a href=""><div class="button-widgets">
-                <p>Available Bus</p>
-            </div></a>
-            <a href=""><div class="button-widgets">
-                <p>Upcoming Schedule</p>
-            </div></a>
-            <a href=""><div class="button-widgets">
-                <p>Available Bus</p>
-            </div></a>
-        </div> -->
-
-        
     </main>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
 </body>
 </html>
