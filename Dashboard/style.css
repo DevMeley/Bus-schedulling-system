@@ -106,7 +106,7 @@ li a:active{
 
 main{
     background-color: rgb(247, 247, 253);
-    height: 620px;
+    height: 100%;
 }
 
 .name a{
@@ -152,6 +152,7 @@ input:focus{
     margin-left: 260px;
     margin-right: 20px;
     margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .right-section{
@@ -215,6 +216,31 @@ button{
     padding: 20px;
     background-color: gainsboro;
     border-radius: 5px;
+}
+section{
+    display: flex;
+    gap: 10px;
+}
+
+.left-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.chart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.chart canvas {
+    width: 100% !important;
+    height: 300px !important;
 }
 
 
