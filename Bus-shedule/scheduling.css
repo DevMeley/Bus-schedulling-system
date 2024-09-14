@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.buttom-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo h3{
+    color: #F0513A;
+    width: 50px;
+}
+
+aside{
+    padding: 20px;
+    float: left;
+    width: 220px;
+    height: 100%;
+    background-color: #171D64;
+    color: white;
+    z-index: 1;
+    position: fixed;
+}
+
+li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+li a:hover{ 
+    background-color: rgb(20, 66, 151);
+    border-radius: 10px;
+}
+
+li a:active{
+    background-color: rgb(20, 66, 151);
+    border-radius: 10px;
+}
+
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+}
+.logout a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.logout{
+    display: flex;
+    gap: 10px;
+}
+
+
+/* GLOBAL CSS */
+
+.global-css{
+    margin-left: 260px;
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px 0 260px;
+    background-color: #e9ebfa;
+}
+
+main{
+    background-color: rgb(247, 247, 253);
+    height: 100%;
+}
+
+.name a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.search-bar input{
+    height: 40px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(250, 249, 249);
+}
+
+input:focus{
+    outline: none;
+}
+
+.buttom-profile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: static;
+}
+
+.buttom-profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+/* Bus Scheduling Styles */
+
+
+button {
+    background-color: #b4ace4;
+    color: #171D64;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters input {
+    height: 35px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: rgb(250, 249, 249);
+}
+
+.schedule-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.schedule-list {
+    overflow-x: auto;
+}
+
+#schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#schedule-table th, #schedule-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#schedule-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#schedule-table tbody{
+    font-size: 12px;
+}
+
+#schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+#schedule-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#schedule-form label {
+    margin-top: 10px;
+}
+
+#schedule-form input {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#schedule-form button {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+/* Flatpickr calendar styles */
+.flatpickr-calendar {
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+

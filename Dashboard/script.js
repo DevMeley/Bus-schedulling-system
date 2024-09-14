@@ -12,8 +12,8 @@ const chartData = {
 
 // Function to create punctuality bar chart
 function createPunctualityChart() {
-    const ctx = document.getElementById('punctualityChart').getContext('2d');
-    new Chart(ctx, {
+    const chart = document.getElementById('punctualityChart').getContext('2d');
+    new Chart(chart, {
         type: 'bar',
         data: {
             labels: ['On Time', 'Delayed'],
@@ -51,8 +51,8 @@ function createPunctualityChart() {
 
 // Function to create bus usage pie chart
 function createBusUsageChart() {
-    const ctx = document.getElementById('busUsageChart').getContext('2d');
-    new Chart(ctx, {
+    const chart1 = document.getElementById('busUsageChart').getContext('2d');
+    new Chart(chart1, {
         type: 'pie',
         data: {
             labels: ['In Service', 'Maintenance', 'Idle'],

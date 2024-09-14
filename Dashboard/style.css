@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px 0 260px;
+    padding: 5px 20px 0 260px;
     background-color: #e9ebfa;
 }
 
@@ -32,7 +32,7 @@ body{
 aside{
     padding: 20px;
     float: left;
-    width: 200px;
+    width: 220px;
     height: 100%;
     background-color: #171D64;
     color: white;
@@ -146,6 +146,9 @@ input:focus{
     outline: none;
 }
 
+
+
+
 /* GLOBAL CSS */
 
 .global-css{
@@ -154,6 +157,10 @@ input:focus{
     margin-top: 15px;
     margin-bottom: 20px;
 }
+
+
+
+
 
 .right-section{
     display: flex;
