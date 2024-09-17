@@ -159,99 +159,59 @@ input:focus{
     margin-bottom: 20px;
 }
 
-
-
-
-
-.right-section{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.quick-action{
-    background-color: white;
-    padding: 15px 20px 15px 20px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 10px;
-
-}
-.quick-action-card{
+.container {
     display: flex;
     gap: 20px;
+    height: 100%;
 }
-button{
-    padding: 15px 30px 15px 30px;
-    border: none;
-    color:#171D64;
-    background-color: #b4ace4;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
-.upcoming-schedule{
-    width: 440px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.top{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px 0 15px;
-}
-
-.table{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.heading-row{
-    display: flex;
-    justify-content: space-between;
-}
-.body-row{
-    display: flex;
-    justify-content: space-between;
+.left-pane {
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
     padding: 20px;
-    background-color: gainsboro;
-    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
-section{
-    display: flex;
-    gap: 10px;
-}
-
-.left-section{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+.right-pane {
     margin-top: 20px;
-    margin-right: 20px;
+    margin-left: 20px;
+    width: 500px;
+    flex-grow: 1;
+    height: 100%;
 }
-
-.chart {
-    background-color: white;
-    padding: 20px;
+#map {
+    height: 500px;
+    width: 500px;
+}
+h1, h2 {
+    margin-top: 0;
+}
+.bus-item {
+    background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
 }
-
-.chart canvas {
-    width: 100% !important;
-    height: 300px !important;
+.bus-status {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.8em;
 }
-
-
-
-
-
+.moving { background-color: #4CAF50; }
+.stopped { background-color: #F44336; }
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 5px;
+}
+select{
+    border-radius: 10px;
+}
+.filters select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}

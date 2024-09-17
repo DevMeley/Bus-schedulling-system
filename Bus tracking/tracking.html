@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus tracking</title>
+    <link rel="stylesheet" href="tracking.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://kit.fontawesome.com/5f54f8e6b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <aside>
+        <div class="side-nav">
+            <div class="logo">
+                <img src="LOgo.png" alt="">
+                <h3>Bus schedulling</h3>
+            </div>
+            <div class="buttom-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-square-poll-vertical"></i> Dashboard</a></li>
+                    <li><a href="bus-schefulling.html"><i class="fas fa-calendar-days"></i> Bus Schedule</a></li>
+                    <li><a href=""><i class="fas fa-clock"></i> Bus Tracking</a></li>
+                    <!-- <li><a href=""><i class="fas fa-bookmark"></i> Booking</a></li> -->
+                    <li><a href=""><i class="fas fa-bell"></i> Notification</a></li>
+                    <li><a href=""><i class="fas fa-chart-simple"></i> Report</a></li>
+                </ul>
+                <div class="logout">
+                    <a href="">Log out <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <div class="top-bar">
+            <div class="left-header">
+                <h3>Schedule Bus</h3>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for anything">
+            </div>
+            <div class="buttom-profile">
+                <img src="LOgo.png" alt="">
+                <div class="profile"><a href="">
+                    <h4>Mr. Yussuf</h4>
+                    <p style="padding-top: 10px">IT support</p>
+                </a></div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="left-pane global-css">
+                    <h4>Filters</h4><br>
+                    <div class="filters">
+                        <select id="route-filter">
+                            <option value="">All Routes</option>
+                        </select>
+                        <select id="driver-filter">
+                            <option value="">All Drivers</option>
+                        </select>
+                        <select id="status-filter">
+                            <option value="">All Statuses</option>
+                            <option value="moving">Moving</option>
+                            <option value="stopped">Stopped</option>
+                        </select>
+                    </div>
+                    <div id="bus-list"></div>
+                </div>
+                <div class="right-pane">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="tracking.js"></script> <!-- Link your JavaScript here -->
+</body>
+</html>
+
+    </main>
+</body>
+</html>

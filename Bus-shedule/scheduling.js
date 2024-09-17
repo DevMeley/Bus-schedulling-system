@@ -14,6 +14,7 @@ const dateFilter = document.getElementById('date-filter');
 const routeFilter = document.getElementById('route-filter');
 const driverFilter = document.getElementById('driver-filter');
 
+
 // Event Listeners
 createScheduleBtn.addEventListener('click', openModal);
 cancelScheduleBtn.addEventListener('click', closeModal);
@@ -21,6 +22,7 @@ scheduleForm.addEventListener('submit', saveSchedule);
 dateFilter.addEventListener('input', applyFilters);
 routeFilter.addEventListener('input', applyFilters);
 driverFilter.addEventListener('input', applyFilters);
+// actionModal.addEventListener('click', openActionModal)
 
 // Initialize Flatpickr for date inputs
 flatpickr("#schedule-date", {
@@ -88,11 +90,7 @@ function updateScheduleTable(filteredSchedules) {
             <td>${schedule.route}</td>
             <td>${schedule.departureTime}</td>
             <td>${schedule.arrivalTime}</td>
-            <td>${schedule.driver}</td>
-            <td>
-                <button class="edit-btn" data-id="${schedule.id}">Edit</button>
-                <button class="delete-btn" data-id="${schedule.id}">Delete</button>
-            </td>
+            <td>${schedule.driver} <i class="fa-solid fa-ellipsis-vertical"></i></td> 
         `;
         tbody.appendChild(row);
     });
@@ -146,6 +144,13 @@ function updateCalendar() {
     const scheduleDates = schedules.map(schedule => schedule.date);
     calendar.setDate(scheduleDates);
 }
+
+// const openActionModal = () =>{
+//     scheduleModal.style.display = 'block';
+    
+// }
+
+openActionModal()
 
 // Initial table population and calendar update
 updateScheduleTable(schedules);
