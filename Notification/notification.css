@@ -158,3 +158,54 @@ input:focus{
     margin-top: 15px;
     margin-bottom: 20px;
 }
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+#status-filter{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+}
+#status-filter:focus{
+    outline: none;
+}
+
+.container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.noticationList{
+    background-color: rgb(250, 249, 249);
+    padding: 20px 30px 20px 30px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.notification{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notification-star{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.head{
+    background-color: rgb(204, 204, 204);
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px 20px 0 0;
+}

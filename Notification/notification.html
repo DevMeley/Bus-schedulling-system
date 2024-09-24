@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus tracking</title>
-    <link rel="stylesheet" href="tracking.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <title>Notification</title>
+    <link rel="stylesheet" href="notification.css">
     <script src="https://kit.fontawesome.com/5f54f8e6b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -17,8 +16,8 @@
             </div>
             <div class="buttom-nav">
                 <ul>
-                    <li><a href="dashboard.html"><i class="fa-solid fa-square-poll-vertical"></i> Dashboard</a></li>
-                    <li><a href="bus-schefulling.html"><i class="fas fa-calendar-days"></i> Bus Schedule</a></li>
+                    <li><a href=""><i class="fa-solid fa-square-poll-vertical"></i> Dashboard</a></li>
+                    <li><a href=""><i class="fas fa-calendar-days"></i> Bus Schedule</a></li>
                     <li><a href=""><i class="fas fa-clock"></i> Bus Tracking</a></li>
                     <!-- <li><a href=""><i class="fas fa-bookmark"></i> Booking</a></li> -->
                     <li><a href=""><i class="fas fa-bell"></i> Notification</a></li>
@@ -34,7 +33,7 @@
     <main>
         <div class="top-bar">
             <div class="left-header">
-                <h3>Schedule Bus</h3>
+                <h3>Notification</h3>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Search for anything">
@@ -48,5 +47,39 @@
             </div>
         </div>
     </main>
+    <section class="global-css">
+        <div class="heading">
+            <h4>List of Notifications</h4>
+            <div class="filter">
+                <p>filter</p>
+                <select id="status-filter">
+                    <option value="">All</option>
+                    <option value="moving">New</option>
+                    <option value="stopped">Older</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div class="head">
+                <h4>All Notifications</h4>
+
+            </div>
+            <div class="noticationList">
+                <div class="notification">
+                    <div class="notification-star">
+                        <i class="fa-regular fa-star" ></i><p>Lorem, ipsum dolor ipsum dolor ipsum dolor ipsum dolorv.</p>
+                    </div>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <div class="notification">
+                    <div class="notification-star">
+                        <i class="fa-regular fa-star"></i><p>Lorem, ipsum dolor ipsum dolor ipsum dolor ipsum dolorv.</p>
+                    </div>
+                    <i class="fa-solid fa-trash-can delete-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="notification.js"></script>
 </body>
 </html>
