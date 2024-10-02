@@ -47,17 +47,17 @@ const calendar = flatpickr("#schedule-calendar", {
 });
 
 // Functions
-function openModal() {
+const openModal = () => {
     scheduleModal.style.display = 'block';
     scheduleForm.reset();
     scheduleForm.removeAttribute('data-id');
 }
 
-function closeModal() {
+const closeModal = () => {
     scheduleModal.style.display = 'none';
 }
 
-function saveSchedule(e) {
+const saveSchedule = (e) => {
     e.preventDefault();
     const formData = new FormData(scheduleForm);
     const scheduleData = Object.fromEntries(formData.entries());
@@ -78,7 +78,7 @@ function saveSchedule(e) {
     closeModal();
 }
 
-function updateScheduleTable(filteredSchedules) {
+const updateScheduleTable = (filteredSchedules) => {
     const tbody = scheduleTable.querySelector('tbody');
     tbody.innerHTML = '';
 
@@ -104,7 +104,7 @@ function updateScheduleTable(filteredSchedules) {
     });
 }
 
-function editSchedule(e) {
+const editSchedule = (e) => {
     const id = parseInt(e.target.getAttribute('data-id'));
     const schedule = schedules.find(s => s.id === id);
     if (schedule) {
@@ -119,14 +119,14 @@ function editSchedule(e) {
     }
 }
 
-function deleteSchedule(e) {
+const deleteSchedule = (e) => {
     const id = parseInt(e.target.getAttribute('data-id'));
     schedules = schedules.filter(schedule => schedule.id !== id);
     updateScheduleTable(schedules);
     updateCalendar();
 }
 
-function applyFilters() {
+const applyFilters= () =>{
     const dateValue = dateFilter.value;
     const routeValue = routeFilter.value.toLowerCase();
     const driverValue = driverFilter.value.toLowerCase();
@@ -140,15 +140,15 @@ function applyFilters() {
     updateScheduleTable(filteredSchedules);
 }
 
-function updateCalendar() {
+const updateCalendar = () => {
     const scheduleDates = schedules.map(schedule => schedule.date);
     calendar.setDate(scheduleDates);
 }
 
-// const openActionModal = () =>{
-//     scheduleModal.style.display = 'block';
+const openActionModal = () =>{
+    scheduleModal.style.display = 'block';
     
-// }
+}
 
 openActionModal()
 

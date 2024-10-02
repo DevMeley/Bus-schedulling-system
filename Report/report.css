@@ -61,7 +61,7 @@ li a:hover{
     border-radius: 10px;
 }
 
-li a:active{
+.report{
     background-color: rgb(20, 66, 151);
     border-radius: 10px;
 }
@@ -157,4 +157,105 @@ input:focus{
     margin-right: 20px;
     margin-top: 15px;
     margin-bottom: 20px;
+}
+
+header {
+    color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-grow: 1;
+}
+
+.left-pane {
+    width: 300px;
+    background-color: #f0f0f0;
+    padding: 16px;
+}
+
+.right-pane {
+    flex-grow: 1;
+    padding: 16px;
+}
+
+.filter {
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 15px 30px 15px 30px;
+    background-color: #b4ace4;
+    border-radius: 10px;
+    color:  #171D64;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #171D64;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.chart-container {
+    margin-top: 32px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+input[type="date"], select {
+    width: 100%;
+    padding: 15px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+#busRoute, #reportType{
+    padding: 10px;
+}
+
+#summary {
+    background-color: #e9e9e9;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.export-buttons button {
+    margin-left: 8px;
+}
+
+#reportChart {
+    width: 100%;
+    height: 300px;
 }

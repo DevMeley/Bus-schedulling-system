@@ -56,7 +56,7 @@ li a{
     gap: 20px;
 }
 
-li a:hover{ 
+.notifications{ 
     background-color: rgb(20, 66, 151);
     border-radius: 10px;
 }

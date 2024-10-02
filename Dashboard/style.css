@@ -61,7 +61,7 @@ li a:hover{
     border-radius: 10px;
 }
 
-li a:active{
+.dashboard{
     background-color: rgb(20, 66, 151);
     border-radius: 10px;
 }
@@ -191,6 +191,11 @@ button{
     font-size: 16px;
     font-weight: bold;
     border-radius: 10px;
+}
+
+button:hover {
+    background-color: #171D64;
+    color: white;
 }
 
 .upcoming-schedule{

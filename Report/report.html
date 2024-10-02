@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus tracking</title>
-    <link rel="stylesheet" href="tracking.css">
+    <link rel="stylesheet" href="report.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/5f54f8e6b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -13,16 +14,15 @@
         <div class="side-nav">
             <div class="logo">
                 <img src="LOgo.png" alt="">
-                <h3>Bus schedulling</h3>
+                <h3>Bus Scheduling</h3>
             </div>
             <div class="buttom-nav">
                 <ul>
-                    <li><a href="dashboard.html"><i class="fa-solid fa-square-poll-vertical"></i> Dashboard</a></li>
-                    <li><a href="bus-schefulling.html"><i class="fas fa-calendar-days"></i> Bus Schedule</a></li>
-                    <li><a href=""><i class="fas fa-clock"></i> Bus Tracking</a></li>
-                    <!-- <li><a href=""><i class="fas fa-bookmark"></i> Booking</a></li> -->
-                    <li><a href=""><i class="fas fa-bell"></i> Notification</a></li>
-                    <li><a href=""><i class="fas fa-chart-simple"></i> Report</a></li>
+                    <li><a href="..\Dashboard\index.html"><i class="fa-solid fa-square-poll-vertical"></i> Dashboard</a></li>
+                    <li><a href="..\Bus-shedule\scheduling.html"><i class="fas fa-calendar-days"></i> Bus Schedule</a></li>
+                    <li><a href="..\Bus tracking\tracking.html"><i class="fas fa-clock"></i> Bus Tracking</a></li>
+                    <li><a href="..\Notification\notification.html"><i class="fas fa-bell"></i> Notification</a></li>
+                    <li class="report"><a href="..\Report\report.html"><i class="fas fa-chart-simple"></i> Report</a></li>
                 </ul>
                 <div class="logout">
                     <a href="">Log out <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
@@ -34,7 +34,7 @@
     <main>
         <div class="top-bar">
             <div class="left-header">
-                <h3>Schedule Bus</h3>
+                <h3>Report</h3>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Search for anything">
@@ -48,5 +48,66 @@
             </div>
         </div>
     </main>
+    <div class="global-css">
+        <header>
+            <h1>Reporting</h1>
+            <div class="export-buttons">
+                <button onclick="exportReport('pdf')">Export PDF</button>
+                <button onclick="exportReport('excel')">Export Excel</button>
+            </div>
+        </header>
+        <section>
+            <div class="left-pane">
+                <h2>Report Filters</h2>
+                <div class="filter">
+                    <label for="dateRange">Date Range:</label>
+                    <input type="date" id="startDate"> to <input type="date" id="endDate">
+                </div>
+                <div class="filter">
+                    <label for="busRoute">Bus/Route:</label>
+                    <select id="busRoute">
+                        <option value="all">All</option>
+                        <option value="bus1">Bus 1</option>
+                        <option value="bus2">Bus 2</option>
+                        <option value="route1">Route 1</option>
+                        <option value="route2">Route 2</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="reportType">Report Type:</label>
+                    <select id="reportType">
+                        <option value="usage">Usage</option>
+                        <option value="punctuality">Punctuality</option>
+                        <option value="maintenance">Maintenance</option>
+                    </select>
+                </div>
+                <button onclick="generateReport()">Generate Report</button>
+            </div>
+            <div class="right-pane">
+                <div class="summary-section">
+                    <h2>Summary</h2>
+                    <p id="summary"></p>
+                </div>
+                <div class="data-table">
+                    <h2>Data Table</h2>
+                    <table id="reportTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Bus/Route</th>
+                                <th>Metric</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportBody"></tbody>
+                    </table>
+                </div>
+                <div class="chart-container">
+                    <canvas id="reportChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </div>
+<script src="report.js"></script>
 </body>
 </html>
