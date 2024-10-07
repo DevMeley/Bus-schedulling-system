@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="summary.css">
+    <script src="https://kit.fontawesome.com/5f54f8e6b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <aside>
+        <div class="side-nav">
+            <div class="logo">
+                <img src="LOgo.png" alt="">
+                <h3>Bus schedulling</h3>
+            </div>
+            <div class="buttom-nav">
+                <ul>
+                    <li class="dashboard"><a href="..\Dashboard\index.html"><i class="fa-solid fa-square-poll-vertical"></i> Dashboard</a></li>
+                    <li><a href="..\Bus-shedule\scheduling.html"><i class="fas fa-calendar-days"></i> Bus Schedule</a></li>
+                    <li><a href="..\Bus tracking\tracking.html"><i class="fas fa-clock"></i> Bus Tracking</a></li>
+                    <li><a href="..\Notification\notification.html"><i class="fas fa-bell"></i> Notification</a></li>
+                    <li><a href="..\Report\report.html"><i class="fas fa-chart-simple"></i> Report</a></li>
+                </ul>
+                <div class="logout">
+                   <a href="">Log out <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="top-bar">
+            <div class="left-header">
+                <h3><a href="../Dashboard\index.html">Dashboard</a></h3>
+                <i class="fa-solid fa-angle-right"></i>
+                <h5>Booking summary</h5>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for anything">
+            </div>
+            <div class="buttom-profile">
+                <img src="LOgo.png" alt="">
+                <div class="profile"><a href="">
+                    <h4>Mr. Yussuf</h4>
+                    <p style="padding-top: 10px">IT support</p>
+                </a></div>
+            </div>
+        </div>
+        <div class="container global-css">
+            <div class="statistics">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-booked">0</div>
+                    <div>Total Booked Seats</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="total-available">0</div>
+                    <div>Total Available Seats</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="buses-in-service">0</div>
+                    <div>Buses in Service</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="upcoming-bookings">0</div>
+                    <div>Upcoming Bookings</div>
+                </div>
+            </div>
+    
+            <!-- <div class="filters">
+                <h2>Filters</h2>
+                <label for="route-filter">Route:</label>
+                <select id="route-filter">
+                    <option value="all">All Routes</option>
+                    <option value="A-B">A -> B</option>
+                    <option value="B-C">B -> C</option>
+                    <option value="C-A">C -> A</option>
+                </select>
+    
+                <label for="bus-filter">Bus ID:</label>
+                <input type="text" id="bus-filter" placeholder="Enter Bus ID">
+    
+                <label for="departure-filter">Departure Time:</label>
+                <input type="time" id="departure-filter">
+    
+                <button onclick="applyFilters()">Apply Filters</button>
+            </div>
+     -->
+            <table id="booking-table">
+                <thead>
+                    <tr>
+                        <th>Bus ID</th>
+                        <th>Route</th>
+                        <th>Booked Seats</th>
+                        <th>Available Seats</th>
+                        <th>Departure Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="booking-list">
+                    <!-- Booking data will be populated here -->
+                </tbody>
+            </table>
+    
+            <div class="actions">
+                <button onclick="printSummary()">Print Summary</button>
+            </div>
+        </div>
+    </main>
+<script src="summary.js"></script>
+</body>
+</html>
